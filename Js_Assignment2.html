@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Object Properties</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+        label{
+            font-size: 30px;
+            text-align: center;
+        }
+        button{
+            font-size: 25px;
+            text-align: center;
+        }
+        h3,h1{
+            font-size: 35px;
+            align-items: center;
+            margin-left: 500px;
+        }
+      #car-object{
+        width: 30%;
+            font-size: 35px;
+            margin-left:500px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease-in-out;
+      }
+      .car-display{
+        display: inline-block;
+        justify-content:center;
+        align-items: center;
+        margin-left: 500px;
+      }
+    </style>
+</head>
+<body>
+    <li> Js_Group2 assignment2: JS Object Properties <br>
+        Assignment: Write a program that creates an object representing a car with 
+        properties such as make, model, year, and color. Implement functions to add,
+         modify, and delete properties dynamically.
+    </li>
+
+    <h1>car object property</h1>
+
+    <h3>Initial car object:</h3>
+    <p id="car-object"> first fill below field</p>
+<div class="car-display">
+    <h3>Add/Modify a Property</h3>
+    <label for="propertyName">Property Name:</label>
+    <input type="text" id="propertyName"><br><br>
+    <label for="propertyValue">Property Value:</label>
+    <input type="text" id="propertyValue"><br><br>
+    <button onclick="addModifyCarProperty()">Add/Modify Car Property</button>
+
+    <h3>Delete a Property</h3>
+    <label for="deletePropertyName">Property Name to Delete:</label>
+    <input type="text" id="deletePropertyName"><br><br>
+    <button onclick="deleteCarProperty()">Delete Car Property</button>
+
+
+</div>
+    <script>
+        // Create a car object
+       var car = {
+            company: 'Toyota',
+            model: 'Camry',
+            year: 2020,
+            color: 'Red'   ,
+            
+       }
+
+       // Display initial car object
+    //    document.getElementById('car-object').innerHTML = JSON.stringify(car, null, 2);
+     
+    function displayCarProperty(car) {
+            return  `
+             <p> <strong> Company:<strong> ${car.company}</p>
+             <p> <strong>  Model:<strong> ${car.model}</p>
+             <p> <strong> Year:<strong> ${car.year}</p>
+             <p> <strong> Color:<strong> ${car.color}</p>
+            `;
+        }
+
+
+       function addModifyCarProperty(){
+
+        const propertyName= document.getElementById("propertyName").value;
+        const propertyValue= document.getElementById("propertyValue").value;
+       
+        if(propertyName && propertyValue){
+            car[propertyName] = propertyValue;
+
+            alert(`carProperty "${propertyName}" added / Modified !!`);
+            document.getElementById('car-object').innerHTML = displayCarProperty(car);
+        }
+        else{
+            alert('Please enter both Property Name and Property Value.');
+        }
+
+       }
+      
+
+       function deleteCarProperty(){
+       const propertyName= document.getElementById("deletePropertyName").value;
+
+       if(car.hasOwnProperty(propertyName)){
+        delete car[propertyName];
+        alert(`carProperty "${propertyName}" deleted!!`);
+        document.getElementById('car-object').innerHTML = JSON.stringify(car, null, 2);
+       }
+       else{
+        alert(`Property "${propertyName}" not found.`);
+       }
+
+
+    }
+
+    </script>
+    
+</body>
+</html>

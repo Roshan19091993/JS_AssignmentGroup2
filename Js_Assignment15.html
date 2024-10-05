@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-15:JS Arrays <br>
+        Assignment: Create an array of your favorite fruits and write functions to add,
+         remove, and display the list of fruits.
+     </li>
+
+     <div>
+
+     </div>
+
+     <script>
+        let Favoritefruits= ["Orange", "PineApple","Mango", "Grapes", "Banana", "DragonFruit"];
+        
+        // Function to add a fruit
+        function addFruits(fruit){
+            
+            Favoritefruits.push(fruit);
+            console.log("After adding fruit to the list:-"+ Favoritefruits);
+
+        }
+        addFruits("Papaya");
+     
+        //function to remove fruit
+        function removeFruits(fruits){
+            
+          let index = Favoritefruits.indexOf(fruits);
+          if(index > -1){
+            Favoritefruits.splice(index, 1 );
+            console.log( "After removing fruit from list:-"+Favoritefruits);
+          }
+          else{
+            console.log("Fruit not found");
+          }
+        }
+        removeFruits("Orange");
+
+    
+        // Function to display fruits
+
+        function displayListOfFruits(){
+            console.log("Final list of favorites fruit:-"+Favoritefruits);
+        }
+        displayListOfFruits(); 
+     
+        
+
+
+     </script>
+
+    
+</body>
+</html>

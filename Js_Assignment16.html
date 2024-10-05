@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Methods</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-16:JS Array Methods <br>
+        Assignment: Implement an array of numbers and demonstrate the use of .map(),
+         .filter(), and .reduce() methods to transform the array in different ways.
+    </li>
+
+    <script>
+        let numbers = [11,22,33,44,55];
+
+        //use of .map() method
+        let doubleNumbers = numbers.map(num=>num *2);
+        console.log("Doubled Numbers using map: ", doubleNumbers);
+
+        //use of filter() method
+
+        let evenNumbers = numbers.filter(num=>num % 2 == 0);
+        console.log("Even Numbers using filter: ", evenNumbers);
+
+        // use of reduce() method
+       
+        let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log("Define array: " ,numbers);
+        console.log("Sum of all array number ussing reduce method: ", sum);
+    </script>
+    
+</body>
+</html>

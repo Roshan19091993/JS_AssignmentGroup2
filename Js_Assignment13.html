@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Number Methods</title>
+    <style>
+        li{
+            font-size: 45px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-13:JS Number Methods <br>
+        Assignment: Write a function that takes a decimal number and 
+        rounds it to the nearest whole number using the .Math.round() method. 
+        Also, demonstrate .Math.ceil() and .Math.floor().
+    </li>
+
+    <script>
+       function roundNumber(){
+        return Math.round(num);
+       }
+
+       function demonstrateCeilAndFloor(num){
+        console.log(`Original number: ${num}`);
+        console.log(`Rounded (math.round): ${Math.round(num)}`);
+        console.log(`celling:(math.ceil): ${Math.ceil(num)}`);
+        console.log(`Floor:(math.floor): ${Math.floor(num)}`);
+       }
+
+       let number=4.5;
+ 
+
+   
+       demonstrateCeilAndFloor(number);
+    </script>
+    
+</body>
+</html>

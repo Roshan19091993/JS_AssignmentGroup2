@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object Display</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+        #person-Info{
+            width: 25%;
+            font-size: 35px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+            transition: transform 0.3s ease-in-out;
+        }
+        h1{
+            margin-bottom: 20px;
+            font-size: 64px;
+            text-align: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment4:JS Object Display <br>
+        Assignment: Create an HTML page with a JavaScript script that displays the properties of an object on the page using DOM manipulation. Use a person object with properties like name, age, and occupation.
+    </li>
+    <h1>Person information</h1>
+    <div id="person-Info"></div>
+    <script>
+        // create a person object
+        let person = {
+            name:"Ashish Ade",
+            age:31,
+            occupation:"Owner of MarkAdd Accademy",
+
+        }
+
+        // carate dom element to display person information
+        let PersonInfoDiv = document.getElementById("person-Info");
+
+        let PersonDetails = `
+        <p><strong>Name:</strong> ${person.name}</p>
+        <p><strong>Age:</strong> ${person.age}</p>
+        <p><strong>Occupation:</strong> ${person.occupation}</p>
+        `;
+
+        // append person details to the dom element
+        PersonInfoDiv.innerHTML = PersonDetails;
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Search</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+        input, button {
+            padding: 15px;
+            font-size: 25px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        p{
+            font-size: 35px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-17:JS Array Search <br>
+        Assignment: Write a function that takes an array of strings and a search term,
+         returning all strings that contain the search term.
+    </li>
+
+    <h1>Search String in Array</h1>
+    <p>Enter a search term to find all string that contain it</p>
+
+    <input type="text" id="searchTerm" placeholder="Enter a search term" />
+
+    <button onclick="FindStringsWithSearchTerm()">Search Strings</button>
+
+    <!-- Display search result-->
+
+    <div class="result" id="result"></div>
+
+    <script>
+
+        
+        //samples array of strings
+        const stringsArray = [
+            'a-zA-Z0-9',
+            '123456',
+            'abcde',
+            'abcdef',
+            'Abcdef',
+            'ABCDef',
+            'hello',
+            'world',
+            'javascript',
+            'programming',
+            'coding',
+            'coding is fun',
+            'javascript is awesome',
+            'zebra',
+            'elephant',
+            'lion',
+            'giraffe',
+            'tiger',
+    ];
+        function FindStringsWithSearchTerm(){
+
+            const searchTerm = document.getElementById('searchTerm').value;
+            const resultDiv = document.getElementById('result');
+
+            //use filter to find Matching strings
+            const result= stringsArray.filter(str=>str.toLowerCase().includes(searchTerm.toLowerCase()));
+
+            //Display the results
+            console.log("result with Input search",result);
+            if(result.length  > 0) {
+                resultDiv.innerHTML = `<h3>Result:</h3> <ul>${result.map( str=>`<li>${str}</li>`).join('')}</ul>`;
+            }
+            else {
+                resultDiv.innerHTML = '<p>No strings found with the search term.</p>';
+            }
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

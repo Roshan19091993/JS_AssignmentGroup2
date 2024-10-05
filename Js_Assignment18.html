@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Sort</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-18:JS Array Sort
+        Assignment: Create an array of objects representing students 
+        (with properties like name and grade) and sort them by grade.
+         Display the sorted list.
+    </li>
+
+    <script>
+        let students =[
+            { name: "Ashish",age:30, grade:'A' },
+            { name: "Rajesh",age:28, grade:'B' },
+            { name: "Anil",age:29, grade:'C' },
+            { name: "Suresh",age:31, grade:'D' }
+        ]
+
+        // sorting array by grade in descending order
+        students.sort((a,b) => b.grade.localeCompare(a.grade));
+        console.log("Sorting array by grade:",students);
+
+        // sorting using for loops
+        // for (let i = 0; i < students.length; i++) {
+        //     for (let j = 0; j < students.length - i - 1; j++) {
+        //         if (students[j].grade < students[j + 1].grade) {
+        //             // swap elements
+        //             let temp = students[j];
+        //             students[j] = students[j + 1];
+        //             students[j + 1] = temp;
+        //         }
+        //     }
+        // }
+        // displaying sorted array
+        // console.log(students);
+
+        // sorting array by age in ascending order
+        // students.sort((a,b) => a.age - b.age);
+        // displaying sorted array
+
+        console.log(students);
+      
+        
+    
+    </script>
+    
+</body>
+</html>

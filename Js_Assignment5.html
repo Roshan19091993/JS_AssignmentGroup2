@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object Constructors</title>
+    <style>
+        li{
+            font-size: 35px;
+            background-color: yellow;
+        }
+        #employee1-details, #employee2-details{
+            margin: 20px;
+            width: 40%;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-5:JS Object Constructors <br>
+        Assignment: Implement a constructor function for creating Employee objects.
+         Include properties for name, position, and salary,
+          and a method to display employee information.
+    </li>
+    <h1>Employee1 Details</h1>
+    <div id="employee1-details"></div>
+    <h1>Employee2 Details</h1>
+    <div id="employee2-details"></div>
+
+    <script>
+        //Create a employee constructor
+
+        function Employee(name,position,salary){
+            this.name = name;
+            this.position = position;
+            this.salary = salary;
+        }
+        //Create an employee object
+        var employee1 = new Employee("John Doe","Software Engineer",50000);
+        var employee2 = new Employee("Johnny james","Projec Maneger",75000);
+        
+        //Display employee information
+        document.getElementById("employee1-details").innerHTML = `
+            Name: ${employee1.name  } <br>
+            Position: ${employee1.position} <br>
+            Salary: ${employee1.salary}
+        `;
+        document.getElementById("employee2-details").innerHTML = `
+            Name: ${employee2.name  } <br>
+            Position: ${employee2.position} <br>
+            Salary: ${employee2.salary}
+            `;
+        console.log(employee1);
+        console.log(employee2);
+    </script>
+    
+</body>
+</html>

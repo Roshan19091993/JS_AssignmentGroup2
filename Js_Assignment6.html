@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+        #web-page{
+            width: 40%;
+            height: 400px;
+            font-size: 35px;
+            margin:auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;  /* Initial background color */
+
+            transition: background-color 1s ease;  /* Apply transition effect */
+        }
+        button{
+            font-size: 25px;
+            width: 25%;
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left:450px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-6:JS Events <br>
+        Assignment: Build a simple web page with a button that changes the background color 
+        of the page when clicked. Use event listeners to handle the button click.
+    </li>
+            <p id="web-page"></p>
+             <button >change Bg color</button>
+    <script>
+        // Get the button element
+        var button = document.querySelector("button");
+        var webPage = document.getElementById("web-page");
+        
+        // Add event listener for the button click
+        button.addEventListener("click", function() {
+            // Change the background color of the web page
+            webPage.style.backgroundColor = getRandomColor();
+        });
+        
+        // Function to generate a random color
+        function getRandomColor() {
+          var letters = "0123456789ABCDEF";
+          var color = "#";
+          for(var i=0;i<6;i++){
+            color += letters[Math.floor(Math.random() * 16)];
+
+          }
+          return color;
+        }
+    </script>
+    
+</body>
+</html>

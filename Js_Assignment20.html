@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Const</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-19:JS Array Const <br>
+        Assignment: Create a constant array representing a set of colors.
+         Attempt to modify the array and explain the difference between reassigning the array
+          and modifying its contents.
+    </li>
+
+    <script>
+        // Create a constant array of colors
+        const colors = ['red', 'blue', 'green'];
+        
+        // Attempt to modify the array
+        colors.push('yellow');
+        console.log(colors); // Output: ['red', 'blue', 'green', 'yellow']
+        
+        // Reassigning the array
+        colors = ['purple', 'orange'];
+        console.log(colors); // Output: ['purple', 'orange']
+        
+        // Modifying the array contents
+        colors[0] = 'pink';
+        console.log(colors); // Output: ['pink', 'orange']
+        
+        //in case of const Uncaught TypeError: Assignment to constant variable.
+        //when we try to reassign the array and modify it
+        
+        // Difference between reassigning and modifying array contents
+        // Reassigning: The original array is replaced entirely by a new array.
+        // Modifying: The original array remains unchanged, but the elements in it are modified.
+
+    </script>
+    
+</body>
+</html>

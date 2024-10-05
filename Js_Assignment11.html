@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Numbers</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+        .Display{
+            margin: 100px auto;
+            width: 500px;
+            height: 500px;
+            text-align: center;
+        }
+        button{
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        #result{
+            font-size: 35px;
+            margin-top: 20px;
+        }
+        label{
+            font-size: 55px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        input{
+           padding: 20px;
+           font-size: 25px;
+
+        }
+    </style>
+
+
+</head>
+<body>
+    <li>Js_Group2 assignment-11:JS Numbers
+        Assignment: Write a program that takes a number as input and determines whether 
+        it is even or odd. Use modulus operator to achieve this.
+    </li>
+    <div class="Display">
+        <label for="inputNumber">Type number to check:</label>
+        <input type="number" id="inputNumber" min="1" max="1000000" required>
+        <button onclick="checkEvenOdd()">Check Even/Odd</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        // Function to check if a number is even or odd
+        function checkEvenOdd(Number) {
+            //get the number from the input 
+            var Number = document.getElementById("inputNumber").value;
+            //check if the input is valid
+
+            if(! Number ){
+                document.getElementById("result").innerText = "Please enter a valid number";
+                return;
+            }
+            // Using modulus operator to check if the remainder is 0
+            if(Number % 2 == 0) {
+                document.getElementById("result").innerText = ` ${Number} is even`;
+                console.log(result);
+            }
+            else{
+                document.getElementById("result").innerText = ` ${Number} is odd`;
+                console.log(result);
+            }
+        }
+        // Calling the function with the provided number
+        checkEvenOdd();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Search</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <li>Js_Group2 assignment-9:JS String Search <br>
+        Assignment: Write a function that checks if a given substring exists within a string.
+         Return a boolean value indicating the result.
+    </li>
+    <script>
+        const MainString = "JavaScript is Awesome!";
+        const Substring = "Awesome";
+        function checkSubstring(str, substring) {
+            return str.includes(substring);
+        }
+
+        console.log(checkSubstring(MainString, Substring)); 
+
+    </script>
+    
+</body>
+</html>

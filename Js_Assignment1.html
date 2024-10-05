@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js_Object</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+        .books{
+            width: 50%;
+            font-size: 35px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <li>
+       Js_Group2 assignment1: JS Objects <br>
+        Assignment: Create a JavaScript object to represent a book. 
+        Include properties like title, author, yearPublished, 
+        and genre. Write a function to display the book details in a formatted string.
+    </li>
+
+    <div class="books" id="Book-details">
+        <h1>Book Details</h1>
+    </div>
+
+
+    <script>
+        // Create a book object
+        var book =  {
+                        title: "To Kill a Mockingbird",
+                        author: "Harper Lee",
+                        yearPublished: 1960,
+                        genre: "Classic"
+                    
+        }
+
+                
+
+        function displayBookDetails(book) {
+            return  `
+             <p> <strong> Title:<strng> ${book.title}</p>
+             <p> <strong> Auther:<strng> ${book.author}</p>
+             <p> <strong>Year Published:<strng> ${book.yearPublished}</p>
+             <p> <strong> Genre:<strng> ${book.genre}</p>
+            `;
+        }
+
+        //Display book details
+        document.getElementById("Book-details").innerHTML = displayBookDetails(book);
+        console.log(displayBookDetails(book));
+    </script>
+    
+</body>
+</html>

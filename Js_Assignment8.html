@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Methods</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li> Js_Group2 assignment-8:JS String Methods <br>
+        Assignment: Create a program that counts the number of vowels in a given string.
+         Utilize string methods such as .toLowerCase(), .split(), and .filter().
+    </li>
+    
+    <script>
+        let testString= 'hello world';
+
+        function countVowels(str) {
+            let lowerStr= str.toLowerCase();
+
+            //split the string into arrays of characters
+            let charArray = lowerStr.split('');
+
+            //define set of vowels
+            const vowels = ['a','e','i','o','u'];
+
+            //use the filter to count the vowels
+            let vowelsCount =charArray.filter(char=>vowels.includes(char)).length;
+
+            return vowelsCount;
+        }
+
+        console.log("number of vowels found in string:"+countVowels(testString));
+    </script>
+</body>
+</html>

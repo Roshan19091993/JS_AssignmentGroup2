@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Strings</title>
+    <style>
+        li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+        #output-string {
+            font-size: 30px;
+            margin-top: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <li> Js_Group2 assignment-7:JS Strings <br>
+        Assignment: Write a function that takes a string input and returns the string reversed.
+         Use various string methods to manipulate the input.
+    </li>
+
+ 
+    <script>
+
+    
+        const inputstring ="Javascript";
+        function reverseString(inputstring) {
+            let reverseString = '';
+            for(var i=inputstring.length-1;i>=0; i--){
+
+                reverseString += inputstring[i];
+            } 
+            return reverseString;
+        }
+        
+        const result = reverseString(inputstring);
+
+        console.log(result);
+        
+    </script>
+    
+</body>
+</html>

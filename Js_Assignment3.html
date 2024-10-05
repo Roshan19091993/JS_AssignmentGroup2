@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object Methods</title>
+    <style>
+          li{
+            font-size: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <li> Js_Group2 assignment3:JS Object Methods<br />
+        Assignment: Extend the car object from the previous assignment to include methods 
+        like getCarInfo() and updateColor(newColor).
+         Demonstrate their use in a console log.
+    </li>
+
+    <script>
+        let car = {
+            brand: "Mercedes",
+            model: "S-Class",
+            year: 2020,
+            color: "Red",
+        
+
+        //method to get car info
+
+        getCarInfo: function() {
+            return ` Brand: ${this.brand},
+             Model: ${this.model},
+              Year: ${this.year}, 
+              Color: ${this.color}`;
+        },
+        //method to update the car color
+        updateColor: function(newColor){
+            this.color = newColor;
+            console.log(`The color of the car has been updated to ${newColor}`);
+        }
+
+    }
+    // Explainations about the change in the color 
+    console.log(car.getCarInfo());
+    car.updateColor("Blue");
+    console.log(car.getCarInfo());
+    </script>
+    
+</body>
+</html>
